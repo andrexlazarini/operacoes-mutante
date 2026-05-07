@@ -1,0 +1,26 @@
+{
+  "$schema": "./node_modules/@stryker-mutator/core/schema/stryker-schema.json",
+  "mutate": [
+    "src/**/*.js"
+  ],
+  "testRunner": "jest",
+  "coverageAnalysis": "off",
+  "concurrency": 1,
+  "reporters": [
+    "clear-text",
+    "html",
+    "progress",
+    "json"
+  ],
+  "tempDirName": "stryker-tmp",
+  "jest": {
+    "projectType": "custom",
+    "configFile": "package.json",
+    "enableFindRelatedTests": false
+  },
+  "mutator": {
+    "excludedMutations": [
+      "ConditionalExpression"
+    ]
+  }
+}
